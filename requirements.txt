@@ -1,0 +1,13 @@
+streamlit
+PyPDF2
+transformers
+torch
+langchain
+langchain_community
+faiss-cpu
+huggingface_hub
+sentence-transformers
+googletrans
+gtts
+langdetect
+nltk
