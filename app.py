@@ -13,7 +13,7 @@ def main():
     indic_lan = find_lang(question_lang)
 
     if user_question:
-        if question_lang != 'en':  # Ensure API key and user question are provided
+        if question_lang != 'en':  # Ensure user question is provided
             translated_question = indic_to_english(user_question, indic_lan)
             # user_input(user_question)
             audio_data = user_input(translated_question)
@@ -31,7 +31,7 @@ def main():
     with st.sidebar:
         st.title("Menu:")
         pdf_docs = st.file_uploader("Upload your PDF Files and Click on the Submit & Process Button", accept_multiple_files=True, key="pdf_uploader")
-        if st.button("Submit & Process", key="process_button") is True:  # Check if API key is provided before processing
+        if st.button("Submit & Process", key="process_button") is True: 
             with st.spinner("Processing..."):
                 raw_text = get_pdf_text(pdf_docs)
                 text_chunks = get_text_chunks(raw_text)
